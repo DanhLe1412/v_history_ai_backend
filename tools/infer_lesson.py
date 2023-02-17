@@ -48,7 +48,9 @@ def get_relative_lesson(image):
 
         min_value = min(table)
         min_index = table.index(min_value)
-
+        inx = np.argsort(np.array(table))
+        print(inx)
+        print(np.array(data)[inx])
         rs = data[min_index]
         
     except sqlite3.Error as error:
